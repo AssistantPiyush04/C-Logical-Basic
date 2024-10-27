@@ -1,0 +1,41 @@
+//First Program to print factorial number: 
+#include<stdio.h>
+int main()
+{
+    int n,i,fact=1;
+    printf("Enter the number: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        fact=fact*i;
+    }
+    printf("%d",fact);
+    return 0;
+}
+
+Output -:
+Enter the number:5
+120
+--------------------------------------------------------------------------------------------------------------------------
+//Second Program to print Fibonacci series
+#include<stdio.h>
+int main()
+{
+    int n,n1=0,n2=1,n3,i;
+    printf("Enter the number: ");
+    scanf("%d",&n);
+    printf("%d%d",n1,n2);
+    for(i=1;i<=n;i++)
+    {
+        n3=n1+n2;
+        printf("%d",n3);
+        n1=n2;
+        n2=n3;
+    }
+
+    return 0;
+}
+
+Output -:
+Enter the number: 5
+0112358

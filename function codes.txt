@@ -1,0 +1,721 @@
+//NO RETURN NO ARGUMENT -:
+
+//First Program..
+#include<stdio.h>
+void show();
+int main()
+{
+    show();
+    return 0;
+}
+void show()
+{
+    printf("Hello World\n");
+}
+
+Output -:
+Hello World
+---------------------------------------------------------------------------
+//Second Program ..
+#include<stdio.h>
+void add();
+void sub();
+void mul();
+void divide();
+int main()
+{
+    add();
+    sub();
+    mul();
+    divide();
+    return 0;
+}
+void add()
+{
+    int a,b,c;
+    printf("Enter first value: ");
+    scanf("%d",&a);
+    printf("Enter Second value: ");
+    scanf("%d",&b);
+    c=a+b;
+    printf("Addition = %d\n",c);
+}
+void sub()
+{
+    int a,b,c;
+    printf("Enter first value: ");
+    scanf("%d",&a);
+    printf("Enter Second value: ");
+    scanf("%d",&b);
+    c=a-b;
+    printf("Subtraction = %d\n",c);
+}
+void mul()
+{
+    int a,b,c;
+    printf("Enter first value: ");
+    scanf("%d",&a);
+    printf("Enter Second value: ");
+    scanf("%d",&b);
+    c=a*b;
+    printf("Multiplication = %d\n",c);
+}
+void divide()
+{
+    int a,b,c;
+    printf("Enter first value: ");
+    scanf("%d",&a);
+    printf("Enter Second value: ");
+    scanf("%d",&b);
+    c=a/b;
+    printf("Divide = %d\n",c);
+}
+
+Output -:
+Enter first value: 5
+Enter Second value: 4
+Addition = 9
+Enter first value: 7
+Enter Second value: 4
+Subtraction = 3
+Enter first value: 6
+Enter Second value: 4
+Multiplication = 24
+Enter first value: 24
+Enter Second value: 12
+Divide = 2
+---------------------------------------------------------------------------
+//Third Program ..
+#include<stdio.h>
+void even();
+void voter();
+void marksheet();
+void electricity();
+void max();
+int main()
+{
+    even();
+    voter();
+    marksheet();
+    electricity();
+    max();
+    return 0;
+}
+void even()
+{
+    int a;
+    printf("Enter first value: ");
+    scanf("%d",&a);
+    if(a%2==0)
+    {
+        printf("Even number\n");
+    }
+    else
+    {
+        printf("Odd number\n");
+    }
+}
+void voter()
+{
+    int age;
+    printf("Enter age: ");
+    scanf("%d",&age);
+    if(age>=18)
+    {
+        printf("Eligible for vote\n");
+    }
+    else
+    {
+        printf("Not Eligible for vote\n");
+    }
+}
+void marksheet()
+{
+    int phy, chem, bio, math, comp; 
+    float per; 
+    printf("Enter five subjects marks: ");
+    scanf("%d\n%d\n%d\n%d\n%d", &phy, &chem, &bio, &math, &comp);
+    per = (phy + chem + bio + math + comp) / 5;
+
+    printf("Percentage = %.2f\n", per);
+    if(per >= 80)
+    {
+        printf("Grade A\n");
+    }
+    else if(per>60 && per<80)
+    {
+        printf("Grade B\n");
+    }
+    else if(per>50 && per<60)
+    {
+        printf("Grade C\n");
+    }
+    else if(per>45 && per<50)
+    {
+        printf("Grade D\n");
+    }
+    else if(per>=25 && per<45)
+    {
+        printf("Grade E\n");
+    }
+    else
+    {
+        printf("Grade F\n");
+    }
+}
+void electricity()
+{
+    float unit,dis,bill,ta;
+    printf("Enter Unit: ");
+    scanf("%f",&unit);
+    printf("Information is:- \n");
+    printf("Name = Praveen Sharma\n");
+    printf("Unit is: %.2f\n",unit);
+    bill=unit*10;
+    printf("Amount is: %.2f\n",bill);
+    //printf("Discount is: %.2f\n",dis);
+    if(unit>=1 && unit<=10)
+    {
+        dis=unit*10/100;
+        ta=unit*10-dis;
+        printf("Discount is: %.2f\n",dis);
+        printf("Total Pay amount is: %.2f",ta);
+    }
+    else if(unit>=11 && unit<=20)
+    {
+        dis=unit*15/100; 
+        ta=unit*10-dis;
+        printf("Discount is: %.2f\n",dis);
+        printf("Total Pay amount is:: %.2f",ta);
+    }
+    else if(unit>=21 && unit<=40)
+    {
+        dis=unit*30/100;
+        ta=unit*10-dis;
+        printf("Discount is: %.2f\n",dis);
+        printf("Total Pay amount is: %.2f",ta);
+    }
+    else if(unit<=50)
+    {
+        dis=unit*50/100;
+        ta=unit*10-dis;
+        printf("Discount is: %.2f\n",dis);    
+        printf("Total Pay amount is: %.2f",ta);
+    }
+}
+void max()
+{
+     int a,b,c;
+    printf("Enter first value: ");
+    scanf("%d",&a);
+    printf("Enter Second value: ");
+    scanf("%d",&b);
+    printf("Enter Third value: ");
+    scanf("%d",&c);
+    if(a>b && a>c)
+    {
+        printf("A is largest number");
+    }
+    else if(b>a && b>c)
+    {
+        printf("B is largest number");
+    }
+    else if(c>a && c>b)
+    {
+        printf("C is largest number");
+    }
+}
+
+Output -:
+Enter first value: 34
+Even number
+Enter age: 26
+Eligible for vote
+Enter five subjects marks: 67
+89
+67
+89
+56
+Percentage = 73.00
+Grade B
+Enter Unit: 67
+Information is:- 
+Name = Praveen Sharma
+Unit is: 67.00
+Amount is: 670.00
+Enter first value: 34
+Enter Second value: 56
+Enter Third value: 12
+B is largest number
+---------------------------------------------------------------------------
+//Fourth Program ..
+#include<stdio.h>
+void Armstrong();
+void palindrome();
+void factorial();
+void Fibonacci(); 
+void count();
+void sod();
+void reverse();
+int main()
+{
+    
+    char a;
+    printf("Enter Any Character: ");
+    scanf("%c",&a);
+    if(a=='a')
+    {
+        Armstrong();
+    }
+    else if(a=='p')
+    {
+        palindrome();
+    }
+    else if(a=='f')
+    {
+        factorial();
+    }
+    else if(a=='b')
+    {
+       Fibonacci();
+    }
+    else if(a=='c')
+    {
+        count();
+    }
+    else if(a=='s')
+    {
+      sod();
+    }
+    else if(a=='r')
+    {
+      reverse();
+    }
+    return 0;
+}
+void Armstrong()
+{
+    int n,sum=0,rem,temp;
+    printf("Enter the number: ");
+    scanf("%d",&n);
+    temp=n;
+    while(n>0)
+    {
+        rem=n%10;
+        sum=sum+rem*rem*rem;
+        n=n/10;
+    }
+    if(temp==sum)
+    {
+        printf("armstrong number\n");
+    }
+    else
+    {
+        printf("not armstrong number\n");
+    }
+}
+void palindrome()
+{
+    int n,sum=0,rem,temp;
+    printf("Enter the number: ");
+    scanf("%int",&n);
+    temp=n;
+    while(n>0)
+    {
+        rem=n%10;
+        sum=sum*10+rem;
+        n=n/10;
+    }
+    if(temp==sum)
+    {
+        printf("palindrome number");
+    }
+    else
+    {
+        printf("not palindrome number");
+    }
+}
+void factorial()
+{
+    int n,i,fact=1;
+    printf("Enter the number: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        fact=fact*i;
+    }
+    printf("Factorial is: %d",fact);
+}
+void Fibonacci()
+{
+     int n,n1=0,n2=1,n3,i;
+    printf("Enter the number: ");
+    scanf("%d",&n);
+    printf("%d%d",n1,n2);
+    for(i=1;i<=n;i++)
+    {
+        n3=n1+n2;
+        printf("%d",n3);
+        n1=n2;
+        n2=n3;
+    }
+}
+void count()
+{
+    int a,count=0;
+    printf("Enter any number: ");
+    scanf("%d",&a);
+    while(a>0)
+    {
+        count++;
+        a=a/10;
+    }
+    printf("%d",count);
+}
+void sod()
+{
+     int a,sum=0,rem;
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    while(a>0)
+    {
+        rem=a%10;
+        sum=sum+rem;
+        a=a/10;
+    }
+    printf("sum of digit is: %d",sum);
+}
+void reverse()
+{
+    int a,sum=0,rem;
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    while(a>0)
+    {
+        rem=a%10;
+        sum=sum*10+rem;
+        a=a/10;
+    }
+    printf("Reverse number is: %d",sum);
+}
+
+Output -:
+Enter Any Character: r
+Enter the number: 345
+Reverse number is: 543
+---------------------------------------------------------------------------
+//NO RETURN AND  ARGUMENT -:
+
+//Fifth Program..
+#include<stdio.h>
+void add(int a,int b);
+void sub(int x,int y);
+void mul(int p,int q);
+void divide(int m,int n);
+int main()
+{
+    add(2,4);
+    sub(5,4);
+    mul(4,7);
+    divide(24,12);
+    return 0;
+}
+void add(int a,int b)
+{
+    int sum=a+b;
+    printf("%d\n",sum);
+}
+void sub(int x,int y)
+{
+    int mi=x-y;
+    printf("%d\n",mi);
+}
+void mul(int p,int q)
+{
+    int mu=p*q;
+    printf("%d\n",mu);
+}
+void divide(int m,int n)
+{
+    int di=m/n;
+    printf("%d\n",di);
+}
+
+Output -:
+6
+1
+28
+2
+---------------------------------------------------------------------------
+//Sixth Program..
+#include<stdio.h>
+void even(int e);
+void voter(int age);
+void marksheet(int phy,int chem,int bio,int math,int comp);
+void electricity(float unit);
+void max(int a,int b,int c);
+int main()
+{
+    even(46);
+    voter(34);
+    marksheet(67,78,98,79,80);
+    electricity(56);
+    max(45,56,23);
+    return 0;
+}
+void even(int e)
+{
+    if(e%2==0)
+    {
+        printf("Even number\n");
+    }
+    else
+    {
+        printf("Odd number\n");
+    }
+}
+void voter(int age)
+{
+    if(age>=18)
+    {
+        printf("Eligible for vote\n");
+    }
+    else
+    {
+        printf("Not Eligible for vote\n");
+    }
+}
+void marksheet(int phy,int chem,int bio,int math,int comp)
+{
+    float per;
+    per = (phy + chem + bio + math + comp) / 5;
+    printf("Percentage = %.2f\n", per);
+    if(per >= 80)
+    {
+        printf("Grade A\n");
+    }
+    else if(per>60 && per<80)
+    {
+        printf("Grade B\n");
+    }
+    else if(per>50 && per<60)
+    {
+        printf("Grade C\n");
+    }
+    else if(per>45 && per<50)
+    {
+        printf("Grade D\n");
+    }
+    else if(per>=25 && per<45)
+    {
+        printf("Grade E\n");
+    }
+    else
+    {
+        printf("Grade F\n");
+    }
+}
+void electricity(float unit)
+{
+    float dis,bill,ta;
+    printf("Information is:- \n");
+    printf("Name = Praveen Sharma\n");
+    printf("Unit is: %.2f\n",unit);
+    bill=unit*10;
+    printf("Amount is: %.2f\n",bill);
+    //printf("Discount is: %.2f\n",dis);
+    if(unit>=1 && unit<=10)
+    {
+        dis=unit*10/100;
+        ta=unit*10-dis;
+        printf("Discount is: %.2f\n",dis);
+        printf("Total Pay amount is: %.2f",ta);
+    }
+    else if(unit>=11 && unit<=20)
+    {
+        dis=unit*15/100; 
+        ta=unit*10-dis;
+        printf("Discount is: %.2f\n",dis);
+        printf("Total Pay amount is:: %.2f",ta);
+    }
+    else if(unit>=21 && unit<=40)
+    {
+        dis=unit*30/100;
+        ta=unit*10-dis;
+        printf("Discount is: %.2f\n",dis);
+        printf("Total Pay amount is: %.2f",ta);
+    }
+    else if(unit<=50)
+    {
+        dis=unit*50/100;
+        ta=unit*10-dis;
+        printf("Discount is: %.2f\n",dis);    
+        printf("Total Pay amount is: %.2f",ta);
+    }
+}
+void max(int a,int b,int c)
+{
+    if(a>b && a>c)
+    {
+        printf("A is largest number");
+    }
+    else if(b>a && b>c)
+    {
+        printf("B is largest number");
+    }
+    else if(c>a && c>b)
+    {
+        printf("C is largest number");
+    }
+}
+
+Output -:
+Even number
+Eligible for vote
+Percentage = 80.00
+Grade A
+Information is:- 
+Name = Praveen Sharma
+Unit is: 56.00
+Amount is: 560.00
+B is largest number
+---------------------------------------------------------------------------
+//Seventh Program..
+#include<stdio.h>
+void armstrong(int n);
+void palindrome(int x);
+void factorial(int y);
+void Fibonacci(int n);
+void count(int a);
+void sod(int b);
+void reverse(int m);
+int main()
+{
+    char c;
+    printf("Enter any character: ");
+    scanf("%c",&c);
+    if(c=='a')
+    {
+      armstrong(153);
+    }
+    else if(c=='p')
+    {
+      palindrome(343);
+    }
+    else if(c=='f')
+    {
+        factorial(6);
+    }
+    else if(c=='b')
+    {
+        Fibonacci(5);
+    }
+    else if(c=='c')
+    {
+        count(345);
+    }
+    else if(c=='s')
+    {
+       sod(243);
+    }
+    else if(c=='r')
+    {
+        reverse(657);
+    }
+    return 0;
+}
+void armstrong(int n)
+{
+    int sum=0,rem,temp;
+    temp=n;
+    while(n>0)
+    {
+        rem=n%10;
+        sum=sum+rem*rem*rem;
+        n=n/10;
+    }
+    if(temp==sum)
+    {
+        printf("armstrong number\n");
+    }
+    else
+    {
+        printf("not armstrong number\n");
+    }
+}
+void palindrome(int x)
+{
+    int sum=0,rem,temp;
+    temp=x;
+    while(x>0)
+    {
+        rem=x%10;
+        sum=sum*10+rem;
+        x=x/10;
+    }
+    if(temp==sum)
+    {
+        printf("palindrome number");
+    }
+    else
+    {
+        printf("not palindrome number");
+    }
+}
+void factorial(int y)
+{
+    int i,fact=1;
+    for(i=1;i<=y;i++)
+    {
+        fact=fact*i;
+    }
+    printf("Factorial is: %d",fact);
+}
+void Fibonacci(int n)
+{
+    int n1=0,n2=1,n3,i;
+    printf("%d%d",n1,n2);
+    for(i=1;i<=n;i++)
+    {
+        n3=n1+n2;
+        printf("%d",n3);
+        n1=n2;
+        n2=n3;
+    }
+}
+void count(int a)
+{
+    int count=0;
+    while(a>0)
+    {
+        count++;
+        a=a/10;
+    }
+    printf("%d",count);
+}
+void sod(int b)
+{
+    int sum=0,rem;
+    while(b>0)
+    {
+        rem=b%10;
+        sum=sum+rem;
+        b=b/10;
+    }
+    printf("sum of digit is: %d",sum);
+}
+void reverse(int m)
+{
+    int sum=0,rem;
+    while(m>0)
+    {
+        rem=m%10;
+        sum=sum*10+rem;
+        m=m/10;
+    }
+    printf("Reverse number is: %d",sum);
+}
+
+Output -:
+Enter any character: r
+Reverse number is: 756
